@@ -1,2 +1,2 @@
-# Generador_contrase-as
+# Generador_contrasenas
 Generador de contraseñas
