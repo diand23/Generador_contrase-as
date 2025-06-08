@@ -16,5 +16,5 @@ def generar_contrasena(longitud=12, usar_mayusculas=True, usar_numeros=True, usa
     if not caracteres:
         raise ValueError("Debe seleccionar al menos un tipo de carácter.")
 
-    contraseña = ''.join(random.choice(caracteres) for _ in range(longitud))
-    return contraseña
+    contrasena = ''.join(random.choice(caracteres) for _ in range(longitud))
+    return contrasena
