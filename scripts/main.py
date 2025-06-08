@@ -1,8 +1,3 @@
-import sys
-import os
-
-# Añadir la carpeta raíz del proyecto al path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from Generador_contrasenas import generar_contrasena
 
