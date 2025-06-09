@@ -5,19 +5,18 @@ Una librería de Python que te de como resultado contraseñas aleatorias.
 ## Instalación
 
 ```bash
- pip install generador-contrasena
+pip install Generador_contrasenas
 ```
 
 ## Características
 
-### Parámetros de la función
+### Parámetros
  - longitud (int): Longitud de la contraseña.
  - usar_mayusculas (bool): Incluir letras mayúsculas.
  - usar_numeros (bool): Incluir números.
  - usar_simbolos (bool): Incluir símbolos especiales.
 
 ## Estructura del Proyecto
-
 ```
 Generador_contrasenas/
 ├── Generador_contrasenas/
@@ -34,36 +33,15 @@ Generador_contrasenas/
 
 ## Uso
 
-### Calculadora Básica
+### Generador de contraseñas
 ```python
-from calculadora import CalculadoraBasica
-
-# Crear una instancia de la calculadora básica
-calc_basica = CalculadoraBasica()
+from Generador_contrasenas.contrasenas import generar_contrasena
 
 # Realizar operaciones
-resultado = calc_basica.sumar(5, 3)  # Retorna 8
-resultado = calc_basica.restar(10, 4)  # Retorna 6
-resultado = calc_basica.multiplicar(2, 3)  # Retorna 6
-resultado = calc_basica.dividir(10, 2)  # Retorna 5.0
-```
+password = generar_contrasena(longitud=16, usar_mayusculas=True, usar_numeros=True, usar_simbolos=True)
+# Imprimir la contraseña generada       
+print("Contraseña generada:", password)
 
-### Calculadora Trigonométrica
-```python
-from calculadora import CalculadoraTrigonometrica
-import math
-
-# Crear una instancia de la calculadora trigonométrica
-calc_trig = CalculadoraTrigonometrica()
-
-# Realizar operaciones trigonométricas
-resultado = calc_trig.seno(math.pi/2)  # Retorna 1.0
-resultado = calc_trig.coseno(0)  # Retorna 1.0
-resultado = calc_trig.tangente(math.pi/4)  # Retorna 1.0
-
-# Convertir entre grados y radianes
-radianes = calc_trig.grados_a_radianes(180)  # Retorna π
-grados = calc_trig.radianes_a_grados(math.pi)  # Retorna 180.0
 ```
 
 ## Desarrollo
@@ -71,7 +49,7 @@ grados = calc_trig.radianes_a_grados(math.pi)  # Retorna 180.0
 1. Clona este repositorio
 2. Crea un entorno virtual:
    ```bash
-   python -m venv venv
+   python -m venv generador_contrasenas_env
    source venv/bin/activate  # En Windows: venv\Scripts\activate
    ```
 3. Instala las dependencias de desarrollo:
@@ -86,7 +64,7 @@ grados = calc_trig.radianes_a_grados(math.pi)  # Retorna 180.0
 ## Ejecutar Pruebas
 
 ```bash
-python -m unittest tests/test_calculadora.py
+python -m unittest tests/test_generador.py
 ```
 
 ## Buenas Prácticas Implementadas
