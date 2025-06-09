@@ -1,6 +1,6 @@
-# Calculadora Matemática
+# Generador de contraseñas aleatorias
 
-Una librería de Python que te de como resultado contraseñas aleatorias.
+Una librería de Python que te de como resultado contraseñas aleatorias para diferentes usuarios.
 
 ## Instalación
 
