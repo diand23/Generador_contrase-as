@@ -4,10 +4,10 @@ setup(
     name="Generador_contrasenas",
     version="0.1.0",
     packages=find_packages(),
-    entry_points= {
+    entry_points={
     'console_scripts': [
-        'generar-contrasena = Generador_contrasenas.contrasenas:main'
-        ]
+        'generar-contrasena = generador_contrasenas.contrasenas:main',
+        ],
     },
     install_requires=[],
     author="Diandra",
