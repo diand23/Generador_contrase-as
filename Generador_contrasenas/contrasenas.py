@@ -1,11 +1,10 @@
-# Crear una librería que me genere una contraseña aleatoria de longitud 8
+# Crear una librería que me genere una contraseña aleatoria de longitud 
 
-# generador_contrasenas.py
-# Librería para generar contraseñas aleatorias
-
+# Instalación de librería para generar contraseñas aleatorias
 import random
 import string
 
+# Generador de contraseñas aleatorias
 def generar_contrasena(longitud=12, usar_mayusculas=True, usar_numeros=True, usar_simbolos=True):
     """
     Genera una contraseña aleatoria.
@@ -34,7 +33,7 @@ def generar_contrasena(longitud=12, usar_mayusculas=True, usar_numeros=True, usa
     contrasena = ''.join(random.choice(caracteres) for _ in range(longitud))
     return contrasena
 
-
+# Función para ejecutar el script directamente
 def main():
     """
     Función principal para ejecutar el script directamente.
@@ -45,5 +44,6 @@ def main():
 
 
 # Este bloque permite que el script se pueda ejecutar directamente desde consola
+# una vez instalado como un paquete.
 if __name__ == "__main__":
     main()
