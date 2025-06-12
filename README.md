@@ -75,13 +75,14 @@ python -m unittest tests/test_generador.py
 ## Buenas Prácticas Implementadas
 
 1. **Programación Orientada a Objetos**: Uso de herencia y clases abstractas
-2. **Modularidad**: Separación de responsabilidades en módulos
-3. **Documentación**: Docstrings detallados para clases y métodos
-4. **Tipado**: Uso de type hints para mejor mantenibilidad
-5. **Pruebas**: Cobertura completa de pruebas unitarias
-6. **Manejo de Errores**: Validación de entrada y manejo de excepciones
-7. **Encapsulamiento**: Uso de propiedades para acceso controlado
-8. **Código Limpio**: Nombres descriptivos y estructura clara
+2. **Patrón Strategy**: aplicación de un patrón de diseño
+3. **Modularidad**: Separación de responsabilidades en módulos
+4. **Documentación**: Docstrings detallados para clases y métodos
+5. **Tipado**: Uso de type hints para mejor mantenibilidad
+6. **Pruebas**: Cobertura completa de pruebas unitarias
+7. **Manejo de Errores**: Validación de entrada y manejo de excepciones
+8. **Encapsulamiento**: Uso de propiedades para acceso controlado
+9. **Código Limpio**: Nombres descriptivos y estructura clara
 
 ## Licencia
 
