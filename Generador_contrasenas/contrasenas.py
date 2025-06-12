@@ -1,57 +1,39 @@
 """ Importar librerías necesarias """
 import random
 import string
+from abc import ABC, abstractmethod
 
+# Estrategia base
+class EstrategiaContrasena(ABC):
+    @abstractmethod
+    def generar(self, longitud: int) -> str:
+        pass
+
+# Estrategia básica
+class EstrategiaBasica(EstrategiaContrasena):
+    def generar(self, longitud):
+        caracteres = string.ascii_letters + string.digits
+        return ''.join(random.choice(caracteres) for _ in range(longitud))
+
+# Estrategia con símbolos
+class EstrategiaSegura(EstrategiaContrasena):
+    def generar(self, longitud):
+        caracteres = string.ascii_letters + string.digits + "!@#$%^&*()-_=+[]{}|;:,.<>?"
+        return ''.join(random.choice(caracteres) for _ in range(longitud))
+
+# Contexto
 class GeneradorContrasenas:
-    def __init__(self, longitud=12, usar_mayusculas=True, usar_numeros=True, usar_simbolos=True):
-        """
-         Parámetros
- - longitud (int): Longitud de la contraseña.
- - usar_mayusculas (bool): Incluir letras mayúsculas.
- - usar_numeros (bool): Incluir números.
- - usar_simbolos (bool): Incluir símbolos especiales.
-        """
+    def __init__(self, estrategia: EstrategiaContrasena, longitud=12):
+        self.estrategia = estrategia
         self.longitud = longitud
-        self.usar_mayusculas = usar_mayusculas
-        self.usar_numeros = usar_numeros
-        self.usar_simbolos = usar_simbolos
 
     def generar(self):
-        """
-        Genera una contraseña aleatoria basada en los parámetros del objeto.
-        
-        Retorna:
-        - str: Contraseña generada.
-        """
-        caracteres = list(string.ascii_lowercase)
+        return self.estrategia.generar(self.longitud)
 
-        if self.usar_mayusculas:
-            caracteres += list(string.ascii_uppercase)
-        if self.usar_numeros:
-            caracteres += list(string.digits)
-        if self.usar_simbolos:
-            caracteres += list("!@#$%^&*()-_=+[]{}|;:,.<>?")
-
-        if not caracteres:
-            raise ValueError("Debe seleccionar al menos un tipo de carácter.")
-
-        contrasena = ''.join(random.choice(caracteres) for _ in range(self.longitud))
-        return contrasena
-
-
-def generar_contrasena(longitud=12, usar_mayusculas=True, usar_numeros=True, usar_simbolos=True):
-    generador = GeneradorContrasenas(longitud, usar_mayusculas, usar_numeros, usar_simbolos)
-    return generador.generar()
-
-
-def main():
-    """
-    Ejecuta una demostración simple al correr el script directamente.
-    """
-    generador = GeneradorContrasenas()
-    contrasena = generador.generar()
-    print("Contraseña generada:", contrasena)
-
-
+# Uso de la librería
 if __name__ == "__main__":
-    main()
+    generador = GeneradorContrasenas(EstrategiaSegura(), longitud=16)
+    print("Contraseña segura:", generador.generar())
+
+    generador = GeneradorContrasenas(EstrategiaBasica(), longitud=10)
+    print("Contraseña básica:", generador.generar())
