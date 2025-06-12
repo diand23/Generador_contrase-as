@@ -3,14 +3,6 @@ import random
 import string
 from abc import ABC, abstractmethod
 
-"""
-Parámetros
- - longitud (int): Longitud de la contraseña.
- - usar_mayusculas (bool): Incluir letras mayúsculas.
- - usar_numeros (bool): Incluir números.
- - usar_simbolos (bool): Incluir símbolos especiales.
-"""
-
 # Estrategia base
 class EstrategiaContrasena(ABC):
     @abstractmethod
