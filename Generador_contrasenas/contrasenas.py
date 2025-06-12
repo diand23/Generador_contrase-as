@@ -30,7 +30,7 @@ class GeneradorContrasenas:
     def generar(self):
         return self.estrategia.generar(self.longitud)
 
-# Uso de la librería
+# Punto de entrada para la terminal
 def main():
     generador = GeneradorContrasenas(EstrategiaSegura(), longitud=16)
     print("Contraseña segura:", generador.generar())
@@ -39,4 +39,4 @@ def main():
     print("Contraseña básica:", generador.generar())
 
 if __name__ == "__main__":
-    main
+    main()
