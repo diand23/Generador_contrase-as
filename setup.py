@@ -6,7 +6,7 @@ setup(
     packages=find_packages(),
     entry_points={
     'console_scripts': [
-        'generar-contrasena = generador_contrasenas.contrasenas:main',
+        'generar-contrasena = GeneradorContrasenas.contrasenas:main',
         ],
     },
     install_requires=[],
