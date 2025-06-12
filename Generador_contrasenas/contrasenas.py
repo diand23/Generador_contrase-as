@@ -6,10 +6,10 @@ class GeneradorContrasenas:
     def __init__(self, longitud=12, usar_mayusculas=True, usar_numeros=True, usar_simbolos=True):
         """
          Parámetros
- - longitud (int): Longitud de la contraseña.
- - usar_mayusculas (bool): Incluir letras mayúsculas.
- - usar_numeros (bool): Incluir números.
- - usar_simbolos (bool): Incluir símbolos especiales.
+        - longitud (int): Longitud de la contraseña.
+        - usar_mayusculas (bool): Incluir letras mayúsculas.
+        - usar_numeros (bool): Incluir números.
+        - usar_simbolos (bool): Incluir símbolos especiales.
         """
         self.longitud = longitud
         self.usar_mayusculas = usar_mayusculas
