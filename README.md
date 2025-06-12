@@ -61,6 +61,10 @@ print("Contraseña generada:", password)
    ```bash
    pip install -e .
    ```
+ 5. Comprobamos que aparece la librería instalada:
+    ```bash
+    pip list
+    ```  
 
 ## Ejecutar Pruebas
 
