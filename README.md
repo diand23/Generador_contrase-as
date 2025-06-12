@@ -74,7 +74,7 @@ print("Password 4:", password4)
 ## Ejecutar Pruebas
 
 ```bash
-python -m unittest tests/test_generador.py
+python -m unittest test/test_generador.py
 ```
 
 ## Buenas Prácticas Implementadas
