@@ -1,13 +1,36 @@
-from Generador_contrasenas.contrasenas import generar_contrasena
 
-# Realizar operaciones
-password1 = generar_contrasena(longitud=16, usar_mayusculas=True, usar_numeros=True, usar_simbolos=True)
-password2 = generar_contrasena(longitud=12, usar_mayusculas=False, usar_numeros=True, usar_simbolos=True)
-password3 = generar_contrasena(longitud=16, usar_mayusculas=True, usar_numeros=False, usar_simbolos=True)
-password4 = generar_contrasena(longitud=10, usar_mayusculas=True, usar_numeros=True, usar_simbolos=False)
+from Generador_contrasenas.contrasenas import EstrategiaBasica, EstrategiaSegura, GeneradorContrasenas
 
-# Mostrar resultados
-print("Password 1:", password1)
-print("Password 2:", password2)
-print("Password 3:", password3)
-print("Password 4:", password4)
+# Test para el generador de contraseñas
+class TestGeneradorContrasenas(unittest.TestCase):
+
+    def test_estrategia_basica_longitud(self):
+        estrategia = EstrategiaBasica()
+        contrasena = estrategia.generar(12)
+        self.assertEqual(len(contrasena), 12)
+
+    def test_estrategia_basica_caracteres_validos(self):
+        estrategia = EstrategiaBasica()
+        contrasena = estrategia.generar(20)
+        for c in contrasena:
+            self.assertIn(c, string.ascii_letters + string.digits)
+
+    def test_estrategia_segura_longitud(self):
+        estrategia = EstrategiaSegura()
+        contrasena = estrategia.generar(15)
+        self.assertEqual(len(contrasena), 15)
+
+    def test_estrategia_segura_contiene_simbolos(self):
+        estrategia = EstrategiaSegura()
+        contrasena = estrategia.generar(100)
+        simbolos = "!@#$%^&*()-_=+[]{}|;:,.<>?"
+        self.assertTrue(any(c in simbolos for c in contrasena))
+
+    def test_generador_usa_estrategia_correctamente(self):
+        generador = GeneradorContrasenas(EstrategiaBasica(), longitud=8)
+        contrasena = generador.generar()
+        self.assertEqual(len(contrasena), 8)
+        self.assertTrue(all(c in string.ascii_letters + string.digits for c in contrasena))
+
+if __name__ == '__main__':
+    unittest.main()
