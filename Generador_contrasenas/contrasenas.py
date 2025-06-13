@@ -3,6 +3,7 @@ import random
 import string
 from abc import ABC, abstractmethod
 
+""" Generador de contraseñas utilizando el patrón de diseño Strategy """
 # Estrategia base
 class EstrategiaContrasena(ABC):
     @abstractmethod
