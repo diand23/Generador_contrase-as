@@ -10,11 +10,13 @@ pip install Generador_contrasenas
 
 ## Características
 
-### Parámetros
- - longitud (int): Longitud de la contraseña.
- - usar_mayusculas (bool): Incluir letras mayúsculas.
- - usar_numeros (bool): Incluir números.
- - usar_simbolos (bool): Incluir símbolos especiales.
+### Generador de contraseñas aleatorias Básica
+Contraseñas aleatorias compuestas por caracteres de tipo string.
+
+### Generador de contraseñas aleatorias Seguras
+Contraseñas aleatorias compuestas por caracteres especiales, para
+
+aumentar la complejidad. 
 
 ## Estructura del Proyecto
 ```
