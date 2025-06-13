@@ -1,23 +1,29 @@
 # Generador de contraseñas aleatorias
 
-Una librería de Python que te de como resultado contraseñas aleatorias para diferentes usuarios.
+Una librería de Python para generar contraseñas aleatorias de forma flexible y segura, aplicando el patrón de diseño Strategy.
 
-## Instalación
+## 🧩 ¿Por qué se utiliza el patrón Strategy?
+
+El patrón de diseño **Strategy** se utiliza para definir distintas formas de generar contraseñas (por ejemplo, básicas o seguras), encapsulando cada comportamiento en una clase separada. Esto permite cambiar la estrategia en tiempo de ejecución sin modificar el código del generador principal, manteniendo el diseño limpio, extensible y flexible.
+
+## 🛠️ Instalación
 
 ```bash
 pip install Generador_contrasenas
 ```
 
-## Características
+## ✨ Características
 
-### Generador de contraseñas aleatorias Básica
+### 🔑 Generador de contraseñas aleatorias Básica
+
 Contraseñas aleatorias compuestas por caracteres de tipo string.
 
-### Generador de contraseñas aleatorias Seguras
+### 🛡 Generador de contraseñas aleatorias Seguras
+
 Contraseñas aleatorias compuestas por caracteres especiales, obteniendo
 una mayor complejidad. 
 
-## Estructura del Proyecto
+## 📁 Estructura del Proyecto
 ```
 Generador_contrasenas/
 ├── Generador_contrasenas/
@@ -32,9 +38,8 @@ Generador_contrasenas/
 └── README.md
 ```
 
-## Uso
+## 📦 Ejemplo de uso
 
-### Generador de contraseñas
 ```python
 # Importar librerías necesarias
 from Generador_contrasenas.contrasenas import GeneradorContrasenas,EstrategiaBasica,EstrategiaSegura
@@ -51,7 +56,7 @@ if __name__ == "__main__":
     main()
 ```
 
-## Desarrollo
+## ⚙️ Instalación y Desarrollo
 
 1. Clona este repositorio
 2. Crea un entorno virtual:
@@ -72,13 +77,13 @@ if __name__ == "__main__":
     pip list
     ```  
 
-## Ejecutar Pruebas
+## 🧪 Ejecutar Pruebas
 
 ```bash
 python -m unittest test/test_generador.py
 ```
 
-## Buenas Prácticas Implementadas
+## ✅ Buenas Prácticas Implementadas
 
 1. **Programación Orientada a Objetos**: Uso de herencia y clases abstractas
 2. **Patrón Strategy**: aplicación de un patrón de diseño
@@ -90,6 +95,6 @@ python -m unittest test/test_generador.py
 8. **Encapsulamiento**: Uso de propiedades para acceso controlado
 9. **Código Limpio**: Nombres descriptivos y estructura clara
 
-## Licencia
+## 🔐 Licencia
 
 Este proyecto está licenciado bajo la Licencia MIT - ver el archivo LICENSE para más detalles.
