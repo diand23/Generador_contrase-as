@@ -94,4 +94,4 @@ python -m unittest test/test_generador.py
 
 ## 📄 Licencia
 
-Este proyecto está licenciado bajo la Licencia MIT - ver el archivo LICENSE para más detalles.
+Este proyecto está licenciado bajo la Licencia MIT.
