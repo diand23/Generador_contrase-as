@@ -67,7 +67,7 @@ if __name__ == "__main__":
    ```bash
    pip install -e .
    ```
- 5. Comprobamos que aparece la librería instalada:
+ 5. Validamos que aparece la librería instalada:
     ```bash
     pip list
     ```  
