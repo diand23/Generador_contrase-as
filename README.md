@@ -1,4 +1,4 @@
-# Generador de contraseñas aleatorias
+# 🔐 Generador de contraseñas aleatorias
 
 Una librería de Python para generar contraseñas aleatorias de forma flexible y segura, aplicando el patrón de diseño Strategy.
 
@@ -95,6 +95,6 @@ python -m unittest test/test_generador.py
 8. **Encapsulamiento**: Uso de propiedades para acceso controlado
 9. **Código Limpio**: Nombres descriptivos y estructura clara
 
-## 🔐 Licencia
+## 📄 Licencia
 
 Este proyecto está licenciado bajo la Licencia MIT - ver el archivo LICENSE para más detalles.
