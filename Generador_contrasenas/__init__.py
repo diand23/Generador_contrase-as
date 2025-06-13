@@ -1,1 +1,1 @@
-from .contrasenas import generar_contrasena
+from Generador_contrasenas.contrasenas import GeneradorContrasenas

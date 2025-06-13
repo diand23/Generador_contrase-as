@@ -1,8 +1,15 @@
-# Importar librería
-from Generador_contrasenas.contrasenas import GeneradorContrasenas
+# Importar librerías necesarias
+from Generador_contrasenas.contrasenas import GeneradorContrasenas,EstrategiaBasica,EstrategiaSegura
 
-# Probar la función de generación de contraseñas
-password = GeneradorContrasenas(longitud=16, usar_mayusculas=True, usar_numeros=True, usar_simbolos=True)
-# Imprimir la contraseña generada       
-print("Contraseña generada:", password)
+# Punto de entrada para la terminal
+def main():
+    generador_seguro = GeneradorContrasenas(EstrategiaSegura(), longitud=16)
+    print("Contraseña segura:", generador_seguro.generar())
+
+    generador_basico = GeneradorContrasenas(EstrategiaBasica(), longitud=10)
+    print("Contraseña básica:", generador_basico.generar())
+
+if __name__ == "__main__":
+    main()
+
 

@@ -6,7 +6,7 @@ setup(
     packages=find_packages(),
     entry_points={
     'console_scripts': [
-        'generar-contrasena = generador_contrasenas.contrasenas:main',
+        'generar-contrasena = Generador_contrasenas.contrasenas:main',
         ],
     },
     install_requires=[],
@@ -15,7 +15,7 @@ setup(
     description="Una librería que genere contraseñas seguras y aleatorias.",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/diand23/Generador_contrase-as",
+    url="https://github.com/diand23/Generador_contrasenas",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
