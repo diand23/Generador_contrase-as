@@ -1,7 +1,7 @@
 # Importar librerías necesarias
 from Generador_contrasenas.contrasenas import GeneradorContrasenas,EstrategiaBasica,EstrategiaSegura
 
-# Punto de entrada para la terminal
+# Realizar operación
 def main():
     generador_seguro = GeneradorContrasenas(EstrategiaSegura(), longitud=16)
     print("Contraseña segura:", generador_seguro.generar())
