@@ -6,12 +6,6 @@ Una librería de Python para generar contraseñas aleatorias de forma flexible y
 
 El patrón de diseño **Strategy** se utiliza para definir distintas formas de generar contraseñas (por ejemplo, básicas o seguras), encapsulando cada comportamiento en una clase separada. Esto permite cambiar la estrategia en tiempo de ejecución sin modificar el código del generador principal, manteniendo el diseño limpio, extensible y flexible.
 
-## 🛠️ Instalación
-
-```bash
-pip install Generador_contrasenas
-```
-
 ## ✨ Características
 
 ### 🔑 Generador de contraseñas aleatorias Básica
