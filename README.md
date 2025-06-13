@@ -14,9 +14,8 @@ pip install Generador_contrasenas
 Contraseñas aleatorias compuestas por caracteres de tipo string.
 
 ### Generador de contraseñas aleatorias Seguras
-Contraseñas aleatorias compuestas por caracteres especiales, para
-
-aumentar la complejidad. 
+Contraseñas aleatorias compuestas por caracteres especiales, obteniendo
+una mayor complejidad. 
 
 ## Estructura del Proyecto
 ```
