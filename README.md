@@ -10,11 +10,12 @@ pip install Generador_contrasenas
 
 ## Características
 
-### Parámetros
- - longitud (int): Longitud de la contraseña.
- - usar_mayusculas (bool): Incluir letras mayúsculas.
- - usar_numeros (bool): Incluir números.
- - usar_simbolos (bool): Incluir símbolos especiales.
+### Generador de contraseñas aleatorias Básica
+Contraseñas aleatorias compuestas por caracteres de tipo string.
+
+### Generador de contraseñas aleatorias Seguras
+Contraseñas aleatorias compuestas por caracteres especiales, obteniendo
+una mayor complejidad. 
 
 ## Estructura del Proyecto
 ```
@@ -35,19 +36,19 @@ Generador_contrasenas/
 
 ### Generador de contraseñas
 ```python
-from Generador_contrasenas.contrasenas import GeneradorContrasenas
+# Importar librerías necesarias
+from Generador_contrasenas.contrasenas import GeneradorContrasenas,EstrategiaBasica,EstrategiaSegura
 
-# Realizar operaciones
-password1 = GeneradorContrasenas(longitud=16, usar_mayusculas=True, usar_numeros=True, usar_simbolos=True)
-password2 = GeneradorContrasenas(longitud=12, usar_mayusculas=False, usar_numeros=True, usar_simbolos=True)
-password3 = GeneradorContrasenas(longitud=16, usar_mayusculas=True, usar_numeros=False, usar_simbolos=True)
-password4 = GeneradorContrasenas(longitud=10, usar_mayusculas=True, usar_numeros=True, usar_simbolos=False)
+# Realizar operación
+def main():
+    generador_seguro = GeneradorContrasenas(EstrategiaSegura(), longitud=16)
+    print("Contraseña segura:", generador_seguro.generar())
 
-# Mostrar resultados
-print("Password 1:", password1)
-print("Password 2:", password2)
-print("Password 3:", password3)
-print("Password 4:", password4)
+    generador_basico = GeneradorContrasenas(EstrategiaBasica(), longitud=10)
+    print("Contraseña básica:", generador_basico.generar())
+
+if __name__ == "__main__":
+    main()
 ```
 
 ## Desarrollo
@@ -66,7 +67,7 @@ print("Password 4:", password4)
    ```bash
    pip install -e .
    ```
- 5. Comprobamos que aparece la librería instalada:
+ 5. Validamos que aparece la librería instalada:
     ```bash
     pip list
     ```  
