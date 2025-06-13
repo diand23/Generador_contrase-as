@@ -57,7 +57,7 @@ if __name__ == "__main__":
 2. Crea un entorno virtual:
    ```bash
    python -m venv generador_contrasenas_env
-   venv\Scripts\activate
+   .\generador_contrasenas_env\Scripts\Activate.ps1 
    ```
 3. Instala las dependencias de desarrollo:
    ```bash
