@@ -52,27 +52,30 @@ if __name__ == "__main__":
 
 ## ⚙️ Instalación y Desarrollo
 
-1. Clona este repositorio
-2. Crea un entorno virtual:
+En este apartado explicamos cómo se debe instalar la librería. Los pasos son:
+
+1. Clonar este repositorio
+2. Crear un entorno virtual:
    ```bash
    python -m venv generador_contrasenas_env
    .\generador_contrasenas_env\Scripts\Activate.ps1 
    ```
-3. Instala las dependencias de desarrollo:
+3. Instalar las dependencias de desarrollo:
    ```bash
    pip install -r requirements.txt
    ```
-4. Instala el paquete en modo desarrollo:
+4. Instalar el paquete en modo desarrollo:
    ```bash
    pip install -e .
    ```
- 5. Validamos que aparece la librería instalada:
+ 5. Validar que aparece la librería instalada:
     ```bash
     pip list
     ```  
 
 ## 🧪 Ejecutar Pruebas
 
+En este apartado, vamos a ajecutar las pruebas para asegurar que el código funciona correctamente, detectar errores a tiempo y mantener la calidad del proyecto, facilitando su mantenimiento y evolución.
 ```bash
 python -m unittest test/test_generador.py
 ```
